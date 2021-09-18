@@ -87,9 +87,7 @@ function calculate() {
     } else {
         var USDPerDEC = powerPrice/resultObj.regular;
     }
-
-    document.getElementById('resultUSDPerDEC').innerHTML = USDPerDEC;
-
+    
     alert('USD per DEC: $' + USDPerDEC);
     return true;
 }
