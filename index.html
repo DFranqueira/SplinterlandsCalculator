@@ -11,7 +11,7 @@
 
 <body onload="document.powerCalculator.powerPrice.focus();">
     <h1>Power Calculator</h1>
-    <form name='powerCalculator' onSubmit="return calculate();">
+    <form name='powerCalculator'>
         <ul>
             <li><label for="powerPrice">Price BCX($):</label></li>
             <li><input type="text" name="powerPrice" size="12" /></li>
@@ -39,10 +39,11 @@
                 </select>
             </li>
             <li><input type="checkbox" name="GF" unchecked /><span>Gold Foil</span></li>
-            <li><input type="submit" name="submit" value="Calculate" /></li>
+            <li><label for="showResult">Result:</label></li>
+            <li><span id="showResult"></span></li>
+            <li><input type="button" name="submit" value="Calculate" onclick="calculate();"/></li>
         </ul>
     </form>
-
 </body>
 
 </html>

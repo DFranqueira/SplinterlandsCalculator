@@ -1,10 +1,13 @@
 h1 {
     margin-left: 70px;
 }
+h2 {
+    margin-left: 80px;
+}
 
 form li {
     list-style: none;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
 }
 
 form ul li label {
@@ -30,9 +33,9 @@ form textarea {
     height: 150px;
 }
 
-[type="submit"] {
-    clear: right;
-    margin: 20px 0 0 230px;
+[type="button"] {
+    clear: left;
+    margin: 20px 0 0 200px;
     font-size: 18px
 }
 

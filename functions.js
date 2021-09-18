@@ -81,13 +81,13 @@ function calculate() {
             break;
         default:
     }
-
+    var USDPerDEC;
     if(document.powerCalculator.GF.checked){
-        var USDPerDEC = powerPrice/resultObj.golden;
+        USDPerDEC = powerPrice/resultObj.golden;
     } else {
-        var USDPerDEC = powerPrice/resultObj.regular;
+        USDPerDEC = powerPrice/resultObj.regular;
     }
     
-    alert('USD per DEC: $' + USDPerDEC);
-    return true;
+    //alert('USD per DEC: $' + USDPerDEC);
+    document.getElementById("showResult").innerHTML = USDPerDEC;
 }
