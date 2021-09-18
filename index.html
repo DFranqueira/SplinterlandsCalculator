@@ -4,41 +4,45 @@
 <head>
     <meta charset="utf-8">
     <title>Splinterlands Power Calculator</title>
-    <meta name="keywords" content="example, JavaScript Form Validation, Sample registration form" />
-    <meta name="description" content="This document is an example of JavaScript Form Validation using a sample registration form. " />
+    <meta name="description" content="This document is a calculator of collection power in Splinterlands. " />
     <link rel='stylesheet' href='js-form-validation.css' type='text/css' />
-    <script src="sample-registration-form-validation.js"></script>
+    <script src="functions.js"></script>
 </head>
 
-<body onload="document.registration.powerPrice.focus();">
+<body onload="document.powerCalculator.powerPrice.focus();">
     <h1>Power Calculator</h1>
-    <form name='registration' onSubmit="return formValidation();">
+    <form name='powerCalculator' onSubmit="return calculate();">
         <ul>
-            <li><label for="powerPrice">Price ($):</label></li>
+            <li><label for="powerPrice">Price BCX($):</label></li>
             <li><input type="text" name="powerPrice" size="12" /></li>
             <li><label for="powerRarity">Rarity:</label></li>
             <li>
                 <select name="powerRarity">
-                <option selected="" value="Default">(Please select a rarity)</option>
-                <option value="C">Common</option>
+                <!--<option selected="C" value="Default">(Please select a rarity)</option>-->
+                <option selected="" value="C">Common</option>
                 <option value="R">Rare</option>
                 <option value="E">Epic</option>
                 <option value="L">Legendary</option>
                 </select>
             </li>
+            <li><label for="powerExpansion">Expansion:</label></li>
             <li>
                 <select name="powerExpansion">
-                <option selected="" value="Default">(Please select a rarity)</option>
-                <option value="U">Untamed</option>
-                <option value="RN">Reward (New Generation, 2021)</option>
-                <option value="R">Reward</option>
+                <!--<option selected="" value="Default">(Please select a rarity)</option>-->
+                <option selected="" value="U">Untamed</option>
+                <option value="RN">Reward (New Gen)</option>
+                <option value="R">Reward (Previous Gen)</option>
                 <option value="D">Dice</option>
+                <option value="G">Gladiator</option>
+                <option value="AP">Alpha|Promo</option>
+                <option value="B">Beta|Rewards</option>
                 </select>
             </li>
-            <li><input type="checkbox" name="GF" value="true" unchecked /><span>Gold Foil</span></li>
+            <li><input type="checkbox" name="GF" unchecked /><span>Gold Foil</span></li>
             <li><input type="submit" name="submit" value="Calculate" /></li>
         </ul>
     </form>
+
 </body>
 
 </html>
